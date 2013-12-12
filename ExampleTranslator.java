@@ -39,7 +39,7 @@ public class ExampleTranslator implements Translator {
         
         // parse contentString with Jsoup
         List<Translation> l = new ArrayList<Translation>();
-        l.add(new Translation("house", "haus"));
+        l.add(new Translation("house", "Haus"));
         return l;
     }
     
