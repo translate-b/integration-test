@@ -17,7 +17,6 @@ public class ExampleTranslator implements Translator {
 
     @Inject
     public ExampleTranslator(Curler curler) {
-        this.translationFactory = translationFactory;
         this.curler = curler;
     }
 
