@@ -8,17 +8,15 @@ import com.google.inject.Inject;
 import core.models.SourceLanguage;
 import core.models.Translation;
 import core.services.Curler;
-import core.services.TranslationFactory;
 import core.services.Translator;
 import fj.data.Either;
 
 public class ExampleTranslator implements Translator {
     
-    private final TranslationFactory translationFactory;
     private final Curler curler;
 
     @Inject
-    public ExampleTranslator(TranslationFactory translationFactory, Curler curler) {
+    public ExampleTranslator(Curler curler) {
         this.translationFactory = translationFactory;
         this.curler = curler;
     }
@@ -42,7 +40,7 @@ public class ExampleTranslator implements Translator {
         
         // parse contentString with Jsoup
         List<Translation> l = new ArrayList<Translation>();
-        l.add(translationFactory.makeTranslation("house", "haus", getProvider(), "noun"));
+        l.add(new Translation("house", "haus"));
         return l;
     }
     
