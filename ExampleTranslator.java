@@ -1,7 +1,7 @@
 package core.services.translators;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.google.inject.Inject;
 
@@ -38,7 +38,7 @@ public class ExampleTranslator implements Translator {
         
         
         // parse contentString with Jsoup
-        Set<Translation> s = new Set<Translation>();
+        Set<Translation> s = new HashSet<>();
         s.add(new Translation("house", "Haus"));
         return s;
     }
