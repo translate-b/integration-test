@@ -21,7 +21,7 @@ public class ExampleTranslator implements Translator {
     }
 
     @Override
-    public Iterable<Translation> translate(String term, SourceLanguage source) {
+    public Set<Translation> translate(String term, SourceLanguage source) {
         Either<String, Exception> content = curler.get("http://www.google.de/");
         if (content.isLeft()) { 
             // The left type is present, so the GET request was successful and
@@ -38,9 +38,9 @@ public class ExampleTranslator implements Translator {
         
         
         // parse contentString with Jsoup
-        List<Translation> l = new ArrayList<Translation>();
-        l.add(new Translation("house", "Haus"));
-        return l;
+        Set<Translation> s = new Set<Translation>();
+        s.add(new Translation("house", "Haus"));
+        return s;
     }
     
     @Override
