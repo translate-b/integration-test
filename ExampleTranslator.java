@@ -1,14 +1,14 @@
-package core.services.translators;
+package de.fungate.translate.core.services.translators;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import com.google.inject.Inject;
 
-import core.models.SourceLanguage;
-import core.models.Translation;
-import core.services.Curler;
-import core.services.Translator;
+import de.fungate.translate.core.models.SourceLanguage;
+import de.fungate.translate.core.models.Translation;
+import de.fungate.translate.core.services.Curler;
+import de.fungate.translate.core.services.Translator;
 import fj.data.Either;
 
 public class ExampleTranslator implements Translator {
