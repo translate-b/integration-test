@@ -1,0 +1,3 @@
+[submodule "integration-test-submodule"]
+	path = integration-test-submodule
+	url = https://github.com/translate-b/integration-test-submodule.git
